@@ -164,21 +164,6 @@ $answer = AIDocs::document(storage_path('contract.docx'))
 
 📖 Check out the **[official package repository](https://github.com/subhashladumor1/laravel-ai-docs)** for complete API documentation!
 
----
-
-## ⚙️ Repository Meta (For GitHub Configuration)
-
-**💡 Suggested Repository Name:**
-`laravel-ai-docs-lab`
-
-**📢 Repository Short Description:**
-`🚀 An interactive GUI testing laboratory playground for the laravel-ai-docs package. Instantly test 18 cutting-edge LLMs across OpenAI, Claude, & Gemini for OCR, PDF, Image, and Audio AI pipelines! 🧪`
-
-**🏷️ Suggested GitHub Topics (Tags):**
-`laravel`, `php`, `ai`, `openai`, `gemini`, `claude`, `ocr`, `pdf-processing`, `document-intelligence`, `rag`, `laravel-package`, `api-testing`, `ai-agents`
-
----
-
 ## 🤝 Contributing
 
 Open source thrives on collaboration! 🌍 Found a bug? Want to add a shiny new feature?
