@@ -17,9 +17,8 @@ $resultKey - key to extract from data response
         <span class="method-badge badge-post">POST</span>
         <div>
             <div class="card-head-title">{{ $title }}</div>
-            <div class="card-head-desc"
-                style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent)">AIDocs::{{ $fileType
-                }}($file){{ $desc }}</div>
+            <div class="card-head-desc" style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent)">
+                AIDocs::{{ $fileType }}($file){{ $desc }}</div>
         </div>
         <span class="card-chevron">▼</span>
     </div>
@@ -35,8 +34,15 @@ $resultKey - key to extract from data response
                 <div class="drop-zone" id="dz-{{ $id }}">
                     <input type="file" name="file" accept="{{ $fileAccept }}" required>
                     <span class="drop-icon">
-                        @if($fileType === 'pdf') 📄 @elseif($fileType === 'image') 🖼️ @elseif($fileType === 'audio') 🎵
-                        @else 📝 @endif
+                        @if ($fileType === 'pdf')
+                            📄
+                        @elseif($fileType === 'image')
+                            🖼️
+                        @elseif($fileType === 'audio')
+                            🎵
+                        @else
+                            📝
+                        @endif
                     </span>
                     <div class="drop-text"><strong>Drop {{ $fileType }} file here</strong><br>or click to browse •
                         {{ $fileMimes }}
@@ -44,8 +50,15 @@ $resultKey - key to extract from data response
                 </div>
                 <div class="file-preview" style="display:none">
                     <span class="file-preview-icon">
-                        @if($fileType === 'pdf') 📄 @elseif($fileType === 'image') 🖼️ @elseif($fileType === 'audio') 🎵
-                        @else 📝 @endif
+                        @if ($fileType === 'pdf')
+                            📄
+                        @elseif($fileType === 'image')
+                            🖼️
+                        @elseif($fileType === 'audio')
+                            🎵
+                        @else
+                            📝
+                        @endif
                     </span>
                     <span class="file-preview-name"></span>
                     <span class="file-preview-size"></span>
@@ -54,20 +67,19 @@ $resultKey - key to extract from data response
             </div>
 
             {{-- Prompt field --}}
-            @if($extraFields === 'prompt')
+            @if ($extraFields === 'prompt')
                 <div class="field">
                     <label>💬 Custom Prompt (optional)</label>
-                    <textarea name="prompt"
-                        placeholder="e.g. Return 5 bullet points only. / Extract: vendor, total, due_date as JSON."></textarea>
+                    <textarea name="prompt" placeholder="e.g. Return 5 bullet points only. / Extract: vendor, total, due_date as JSON."></textarea>
                 </div>
             @endif
 
             {{-- Question field --}}
-            @if($extraFields === 'question')
+            @if ($extraFields === 'question')
                 <div class="field">
                     <label>❓ Question (required)</label>
-                    <input type="text" name="question" placeholder="e.g. What is the contract value? / Who signed this?"
-                        required>
+                    <input type="text" name="question"
+                        placeholder="e.g. What is the contract value? / Who signed this?" required>
                 </div>
             @endif
 
@@ -88,7 +100,7 @@ $resultKey - key to extract from data response
                                 <option value="gpt-4o">gpt-4o</option>
                                 <option value="gpt-4-turbo">gpt-4-turbo</option>
                             </optgroup>
-                            @if($fileType !== 'audio')
+                            @if ($fileType !== 'audio')
                                 <optgroup label="Claude">
                                     <option value="claude-opus-4-6">claude-opus-4-6</option>
                                     <option value="claude-sonnet-4-6">claude-sonnet-4-6</option>
@@ -101,11 +113,7 @@ $resultKey - key to extract from data response
                                     <option value="gemini-3-pro-preview">gemini-3-pro-preview</option>
                                     <option value="gemini-3-flash-preview">gemini-3-flash-preview</option>
                                     <option value="gemini-2.5-pro">gemini-2.5-pro</option>
-                                    <option value="gemini-2.5-flash">gemini-2.5-flash</option>
-                                    <option value="gemini-2.5-flash-lite">gemini-2.5-flash-lite</option>
-                                    <option value="gemini-2.0-flash">gemini-2.0-flash</option>
-                                    <option value="gemini-2.0-flash-lite">gemini-2.0-flash-lite</option>
-                                    <option value="gemini-1.5-flash">gemini-1.5-flash</option>
+
                                 </optgroup>
                             @else
                                 <option disabled>── Audio: OpenAI only ──</option>
