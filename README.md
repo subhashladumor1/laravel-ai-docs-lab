@@ -16,6 +16,8 @@
 
 ## 🌟 Overview
 
+![Overview](screenshots/image.png)
+
 Welcome to the **Laravel AI Docs Test Lab**! 🧪 This project serves as a comprehensive, interactive laboratory designed to showcase and test the full capabilities of the `laravel-ai-docs` package.
 
 Say goodbye to blind API calls! 🚫 This open-source lab provides a beautiful, dark-mode GUI to experiment with **18 cutting-edge AI models** across the **Top 3 leading AI providers**: OpenAI 🔵, Anthropic Claude 🟧, and Google Gemini ✨.
@@ -163,6 +165,8 @@ $answer = AIDocs::document(storage_path('contract.docx'))
 ```
 
 📖 Check out the **[official package repository](https://github.com/subhashladumor1/laravel-ai-docs)** for complete API documentation!
+
+---
 
 ## 🤝 Contributing
 
